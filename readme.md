@@ -14,8 +14,9 @@ cd QuickMap
 dotnet restore
 dotnet run [int seed]
 ```
+ - Web: Launch WebMap project in debug. 
  
-# Keyboard
+# Keyboard (console only)
 
 {q} exit
 
@@ -25,8 +26,15 @@ dotnet run [int seed]
 
 any other key will regenerate the map with a random seed
 
+# Web version
 
-# Result
+Only 2 webmethods are supported right now:
+
+- GET /  -> returns a map with a random seed
+- GET /{seed} -> returns the map generated with the specified seed
+
+
+# Example result
 
 ```
 0.................................01222221100.........0.........000..000.............................12345555444443210..............00001244456777777677665544445543220.................................

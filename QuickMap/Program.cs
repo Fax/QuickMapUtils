@@ -2,12 +2,13 @@
 using SharpNoise.Builders;
 using SharpNoise.Modules;
 using System;
+using System.Text;
 
 namespace QuickMap
 {
     static class AppConfig
     {
-        public static int ZoomFactor = 1;
+        public static int ZoomFactor = 3;
 
         public const int WORLD_WIDTH = 200;
         public const int WORLD_HEIGHT = 60;
@@ -111,7 +112,7 @@ namespace QuickMap
 
         public float[] MasterWorldGen()
         {
-            Console.Clear();
+           
 
             var noiseSource = new Perlin
             {
@@ -134,21 +135,45 @@ namespace QuickMap
 
         private void PrintTile(float cell)
         {
+            Console.WriteLine(ConverChar(cell));
+        }
 
-            if (cell < 0) { Console.Write("."); return; }
-            if (cell < .1) { Console.Write("0"); return; }
-            if (cell < .2) { Console.Write("1"); return; }
-            if (cell < .3) { Console.Write("2"); return; }
-            if (cell < .4) { Console.Write("3"); return; }
-            if (cell < .5) { Console.Write("4"); return; }
-            if (cell < .6) { Console.Write("5"); return; }
-            if (cell < .7) { Console.Write("6"); return; }
-            if (cell < .8) { Console.Write("7"); return; }
-            if (cell < 1) { Console.Write("8"); }
+        public string ConverChar(float cell)
+        {
+
+            if (cell < 0) { return "."; }
+            if (cell < .1) { return "0"; }
+            if (cell < .2) { return "1"; }
+            if (cell < .3) { return "2"; }
+            if (cell < .4) { return "3"; }
+            if (cell < .5) { return "4"; }
+            if (cell < .6) { return "5"; }
+            if (cell < .7) { return "6"; }
+            if (cell < .8) { return "7"; }
+            if (cell < 1) { return "8"; }
+            return "9";
+        }
+
+        public string MapToString(float[] m)
+        {
+            var sb = new StringBuilder();
+            for (var j = 0; j < AppConfig.WORLD_HEIGHT; j++)
+            {
+                for (var i = 0; i < AppConfig.WORLD_WIDTH; i++)
+                {
+                    var pos = j * AppConfig.WORLD_WIDTH + i;
+                    var cell = m[pos];
+                    var charCell = ConverChar(cell);
+                    sb.Append(charCell);
+                }
+                sb.AppendLine("");
+            }
+            return sb.ToString();
         }
 
         public void PrintMap(float[] m)
         {
+            Console.Clear();
             for (var j = 0; j < AppConfig.WORLD_HEIGHT; j++)
             {
                 for (var i = 0; i < AppConfig.WORLD_WIDTH; i++)

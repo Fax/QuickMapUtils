@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickMap", "QuickMap\QuickMap.csproj", "{9548D87E-1AEB-4D0C-A4F0-FC41F391A60E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMap", "WebMap\WebMap.csproj", "{27DB7D34-681A-4E0B-A4F9-F2969E8C0938}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9548D87E-1AEB-4D0C-A4F0-FC41F391A60E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9548D87E-1AEB-4D0C-A4F0-FC41F391A60E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9548D87E-1AEB-4D0C-A4F0-FC41F391A60E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27DB7D34-681A-4E0B-A4F9-F2969E8C0938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27DB7D34-681A-4E0B-A4F9-F2969E8C0938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27DB7D34-681A-4E0B-A4F9-F2969E8C0938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27DB7D34-681A-4E0B-A4F9-F2969E8C0938}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
