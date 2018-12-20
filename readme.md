@@ -4,7 +4,7 @@ This is a quick util to generate a map from a perlin noise.
 
 Not impressive, but it works.
 
-.net code + simple noise. The warning about the version of simple noise can be ignored.
+.net code + SharpNoise. The warning about the version of simple noise can be ignored.
 
 # Run it
  - VStudio :  open the solution, restore nuget packages, F5. 
